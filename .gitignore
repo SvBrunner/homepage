@@ -25,3 +25,5 @@ logs
 
 pnpm-lock.yaml
 .direnv
+
+public/rss

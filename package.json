@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-rss.mjs",
+    "prebuild": "node scripts/generate-rss.mjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -10,10 +12,15 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.12.0",
+    "@tailwindcss/typography": "^0.5.19",
     "better-sqlite3": "^12.8.0",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1",
     "nuxt": "^4.4.2"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0"
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "feed": "^5.2.0"
   }
 }

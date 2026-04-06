@@ -8,6 +8,7 @@
         <a href="https://418.lol/m/svb/n">→</a>
     </p>
       <div class="flex gap-4">
+         <a href="/rss">rss</a>
         <a href="https://github.com/SvBrunner" target="_blank">GitHub</a>
       </div>
     </div>
