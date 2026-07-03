@@ -1,0 +1,10 @@
+services:
+  homepage:
+    image: ghcr.io/svbrunner/homepage:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - BLOG_DIR=/data/blog
+    volumes:
+      - ./posts:/data/blog
+    restart: unless-stopped

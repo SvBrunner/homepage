@@ -1,15 +1,11 @@
 <script setup lang="ts">
 const route = useRoute()
+const slug = route.path.split('/').at(-1)
 
-const { data: post } = await useAsyncData(route.path, () => {
-  return queryCollection('blog').path(route.path).first()
-})
+const { data: post } = await useFetch(`/api/blog/${slug}`)
 
 if (!post.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Post not found'
-  })
+  throw createError({ statusCode: 404, statusMessage: 'Post not found' })
 }
 </script>
 

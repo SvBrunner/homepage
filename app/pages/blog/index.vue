@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('blog-list', () => {
-  return queryCollection('blog')
-    .where('published', '=', true)
-    .order('date', 'DESC')
-    .all()
-})
+const { data: posts } = await useFetch('/api/blog')
 </script>
 
 <template>
